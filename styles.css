@@ -1,0 +1,45 @@
+body{
+    font-family: Inter, Arial;
+    padding: 80px;
+    margin: 0;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+nav a{
+    color: hsl(233, 8%, 79%);
+    text-decoration: none;
+}
+
+nav a:visited{
+    color: hsl(233, 8%, 79%);
+}
+
+nav a:hover{
+    color: hsl(35, 77%, 62%);
+}
+
+.logo{
+    left: 0px;
+}
+ul{
+
+}
+li{
+    display: inline;
+    margin-left: 30px;
+}
+
+img{
+    max-width: 100%;
+    max-height: 30%;
+}
+
+p{
+    font-size: 15px;
+}
