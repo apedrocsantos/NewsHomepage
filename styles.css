@@ -44,11 +44,15 @@ nav a:hover {
     color: hsl(35, 77%, 62%);
 }
 
-.logo {
+#logo {
     left: 0px;
 }
 
-.icon{
+#icon{
+    display: none;
+}
+
+#icon2{
     display: none;
 }
 
@@ -63,6 +67,13 @@ main {
     display: grid;
     grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
     gap: var(--gap);
+}
+
+.jumbo{
+    background-image: url("./assets/images/image-web-3-desktop.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 350px;
 }
 
 .main-article {
@@ -105,7 +116,7 @@ button {
     margin: 0;
     background-color: black;
     border: none;
-    width: 40%;
+    min-width: 120px;
 }
 
 button a {
@@ -156,10 +167,14 @@ h3:hover {
     border-bottom: 1px solid hsl(0, 0%, 34%);
 }
 
+.last{
+    border-bottom: none;
+}
+
 /*m++++++++++++++++++++++SECONDARY ARTICLES+++++++++++++++++++++++++++++++*/
 .bottom-section{
     display: grid;
-    grid-template: 1fr / 1fr 1fr 1fr;
+    grid-template: 150px / 1fr 1fr 1fr;
     grid-row: 3;
     grid-column: 1 / 4;
     gap: var(--gap);
@@ -167,11 +182,11 @@ h3:hover {
 
 .bottom{
     display: flex;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 .bottom img {
-    max-height: 100%;
+    max-height: 150px;
 }
 
 .bottom img:hover {
@@ -186,13 +201,13 @@ h3:hover {
 
 .bottom-text h2 {
     margin: 0px;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 .bottom-text h3 {
     margin-top: 10px;
     color: black;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .bottom-text h3:hover {
@@ -202,17 +217,23 @@ h3:hover {
 
 @media only screen and (max-width: 800px) {
     
-    .icon{
+    #icon{
         display: block;
         padding: 10px;
     }
     
-    .icon:hover{
+    #icon:hover{
         cursor: pointer;
     }
-    
-    .icon:active{
-    
+
+    #icon2{
+      position: relative;
+      left: -10px;
+    }
+
+
+    #icon2:hover{
+        cursor: pointer;
     }
     
     nav ul {
@@ -220,14 +241,14 @@ h3:hover {
         right: 0px;
         top: 40px;
         background-color: white;
-        display: flex;
+        display: none;
         flex-direction: column;
         margin: 0;
         padding: 100px 0;
     }
 
     nav li{
-        display: none;
+        display: block;
         text-align: left;
         margin: 0;
         padding: 0;
@@ -243,8 +264,8 @@ h3:hover {
     main {
         margin-top: 5px;
         display: block;
-        padding: 10px;
     }
+
     main > *{
         margin-bottom: 20px;
         
@@ -263,6 +284,7 @@ h3:hover {
 
     .bottom-section{
         display: block;
+        padding: 30px 0;
     }
 
 }
